@@ -29,10 +29,11 @@ darkmode.onclick = () => {
       
 
 document.getElementById('resume-link-1').addEventListener("click", () => {
+  console.log("Script file loaded successfully");
   window.open("https://drive.google.com/file/d/1VXxIiJAIwC9OXHfo8KjqkTRox1v8_Y_t/view?usp=drive_link", "_blank");
 });
 
 document.getElementById('resume-link-2').addEventListener("click", () => {
-  // console.log("OPENinig.....");
+  console.log("Script file loaded successfully");
   window.open("https://drive.google.com/file/d/1VXxIiJAIwC9OXHfo8KjqkTRox1v8_Y_t/view?usp=drive_link", "_blank");
 });
