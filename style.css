@@ -122,7 +122,8 @@ header.shadow {
 
 .home-img1 img {
     width: 100%;
-    border: 1px solid rgb(0, 0, 0);
+    /* border: 1px solid rgb(0, 0, 0); */
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .home-text span {
