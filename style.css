@@ -167,8 +167,7 @@ header.shadow {
 }
 
 .hero-section #element {
-    /* color: var(--hover); */
-    color: red;
+    color: red; /* Changed from var(--hover) to red */
 }
 
 /* Adjust resume button for hero section */
@@ -632,14 +631,14 @@ form textarea {
     color: #22cf91;
 }
 
-/* For Mobile */
+/* For Mobile - General Adjustments */
 @media (max-width: 991px) {
     header {
-        padding: 18px 4%;
+        padding: 18px 4%; /* Consistent padding */
     }
 
     section {
-        padding: 40px 4%;
+        padding: 40px 4%; /* Consistent padding for sections */
     }
 }
 
@@ -700,70 +699,198 @@ form textarea {
 
     /* Hero section responsiveness */
     .hero-section {
-        height: 100vh;
-        padding-top: 80px;
+        height: 100vh; /* Maintain full height on mobile */
+        padding-top: 80px; /* Ensure content clears fixed header */
     }
 
     .hero-section #user-detail-name {
-        font-size: 2rem;
+        font-size: 2rem; /* Adjust font size for mobile */
     }
 
     .hero-section .hero-typing-text {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Adjust font size for mobile */
     }
 
+    /* About section responsiveness */
     .about-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack columns on mobile */
+        text-align: center; /* Center content */
+        gap: 2rem; /* Increased gap between stacked elements */
     }
 
     .home-img-main {
         display: flex;
-        justify-content: center;
+        flex-direction: column; /* Stack image and info vertically */
+        align-items: center; /* Center content horizontally */
+        margin-bottom: 2rem; /* Space between image/info and about text */
     }
 
-    .skills-container {
-        grid-template-columns: 1fr;
+    .home-img-main img { /* Specific for the about image */
+        width: 90%; /* Make image fill more width on mobile */
+        max-width: 250px; /* Limit max size for large phones/small tablets */
+        margin-bottom: 1.5rem; /* Space between image and info boxes */
     }
 
-    .contact-form form {
-        width: 300px;
+    .information {
+        width: 100%; /* Ensure information box takes full width */
+        max-width: 250px; /* Limit max width for readability */
+        margin: 0 auto; /* Center information box */
+    }
+    .information .info-box {
+        justify-content: flex-start; /* Align info boxes to the left on mobile */
+        margin-bottom: 0.8rem; /* Reduced margin for compact list */
+        font-size: 0.95rem; /* Slightly larger font for info boxes */
+    }
+    .information .info-box .bx {
+        font-size: 20px; /* Slightly smaller icon size */
+    }
+    .information .info-box span,
+    .information .info-box h3 {
+        font-size: 0.95rem; /* Consistent font size for text in info boxes */
     }
 
-    .contact-button {
-        margin-left: 25%;
+
+    .about-text {
+        padding: 0 10px; /* Add horizontal padding to about text */
     }
 
-    #git-stat>div>img {
-        width: 90%;
-        background-color: black;
+    .about-text p {
+        text-align: left; /* Keep about text left-aligned for readability */
+        font-size: var(--p-font); /* Ensure font size is consistent */
     }
 
-    /* Skills and Projects categories responsiveness */
+
+    /* Skills section responsiveness */
     .skills-categories,
     .projects-categories {
-        gap: 2rem;
-        /* Reduce gap on mobile */
+        gap: 2rem; /* Reduce gap between categories on mobile */
     }
 
     .skill-category-group h3,
     .project-category-group h3 {
-        font-size: 1.4rem;
-        /* Adjust title size */
+        font-size: 1.4rem; /* Adjust category title size */
     }
 
     .skills-content {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        /* Adjust minmax for smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjusted minmax for smaller skill cards on mobile */
+        gap: 0.8rem; /* Slightly smaller gap for skills */
     }
 
+    .skills-card {
+        width: auto; /* Allow auto width */
+        padding: 5px; /* Reduced padding */
+        height: 100px; /* Fixed height for consistency */
+    }
+    .skills-card img {
+        width: 50%; /* Adjust image size within skill card */
+    }
+    .skills-card h4 {
+        font-size: 0.7rem; /* Smaller font for skill names */
+        white-space: nowrap; /* Prevent wrapping */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 2px;
+    }
+
+
+    /* Projects section responsiveness */
     .projects-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        /* Adjust minmax for smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Further reduced minmax for project cards on mobile */
+        gap: 1rem; /* Reduced gap for projects */
+    }
+
+    .project-card {
+        padding-bottom: 10px; /* Reduced padding */
     }
 
     .project-card img {
-        height: 180px;
-        /* Adjust project image height for mobile */
+        height: 150px; /* Reduced project image height for mobile to make cards smaller */
+    }
+
+    .project-name h3 {
+        font-size: 1.2rem; /* Smaller font for project titles on mobile */
+    }
+
+    .project-description p {
+        font-size: 0.8rem; /* Smaller font for project descriptions on mobile */
+        line-height: 1.4;
+    }
+
+    .project-tech-stack1 {
+        gap: 4px; /* Even smaller gap for tech stack on mobile */
+        padding: 0 5px;
+    }
+
+    .tech-card {
+        width: 75px; /* Adjusted width for tech cards on mobile */
+        height: 75px; /* Adjusted height for consistency */
+        padding: 2px;
+    }
+
+    .tech-card img {
+        max-width: 55%; /* Adjust image size within tech card */
+        max-height: 55%;
+        margin-bottom: 2px;
+    }
+
+    .tech-card h6 {
+        font-size: 0.55rem; /* Smallest font for tech names on mobile */
+        padding: 0 1px;
+    }
+
+    .projects-button {
+        gap: 10px; /* Smaller gap between project buttons on mobile */
+        padding: 0 10px 5px;
+    }
+
+    .button-project-link {
+        padding: 0.5rem 1rem; /* Smaller buttons on mobile */
+        font-size: 0.9rem;
+    }
+
+
+    /* Github Stats section responsiveness */
+    #git-stat {
+        display: flex;
+        flex-direction: column; /* Stack images vertically on mobile */
+        align-items: center;
+        gap: 1.5rem; /* Space between stat images */
+    }
+    #git-stat > div {
+        width: 100%; /* Ensure each div takes full width */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #git-stat > div > img {
+        width: 95%; /* Make GitHub images fill more width on mobile */
+        max-width: 400px; /* Limit max width for readability */
+        background-color: black;
+    }
+
+
+    /* Contact section responsiveness */
+    .contact-form form {
+        width: 100%; /* Full width for form on mobile */
+        max-width: 350px; /* Max width for readability */
+        margin: 0 auto; /* Center the form */
+    }
+
+    .contact-button {
+        width: 100%; /* Full width button */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center text in button */
+    }
+
+    /* Footer responsiveness */
+    .footer-social {
+        display: flex;
+        justify-content: center; /* Center social icons */
+        flex-wrap: wrap; /* Allow icons to wrap if too many */
+        gap: 10px; /* Space between icons */
+    }
+    .footer-social a i {
+        margin-left: 0; /* Remove specific left margin for better centering */
     }
 }
 
@@ -774,19 +901,18 @@ form textarea {
     }
 
     header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        right: 0;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: var(--bg-color);
-        padding: 13px 10%;
-        transition: 0.2s;
-        box-shadow: -3px -3px 7px #ffffff73,
-            2px 2px 5px rgba(94, 104, 121, 0.288);
+        padding: 13px 4%; /* Adjust header padding for very small screens */
+    }
+
+    .hero-section #user-detail-name {
+        font-size: 1.8rem; /* Smaller font for very small screens */
+    }
+    .hero-section .hero-typing-text {
+        font-size: 1rem; /* Smaller font for very small screens */
+    }
+    .hero-section .resume-button {
+        padding: 0.6rem 1.2rem; /* Smaller button for very small screens */
+        font-size: 1rem;
     }
 
     .home-text span {
@@ -802,16 +928,60 @@ form textarea {
         font-size: 1rem;
     }
 
-    .contact-form form {
-        width: 300px;
+    /* About Section - Very Small Screens */
+    .about-container {
+        gap: 1.5rem; /* Reduced gap for very small screens */
+    }
+    .home-img-main img {
+        max-width: 200px; /* Even smaller image for very small screens */
+        margin-bottom: 1rem; /* Reduced space */
+    }
+    .information {
+        max-width: 250px; /* Adjusted max-width for very small screens */
+    }
+    .information .info-box {
+        font-size: 0.9rem; /* Slightly smaller font for info boxes */
+        margin-bottom: 0.6rem; /* Further reduced margin */
+    }
+    .information .info-box .bx {
+        font-size: 18px; /* Smaller icon size */
+    }
+    .information .info-box span,
+    .information .info-box h3 {
+        font-size: 0.9rem; /* Consistent font size for text in info boxes */
+    }
+    .about-text {
+        padding: 0 5px; /* Reduce padding further on very small screens */
+    }
+    .about-text p {
+        font-size: 0.85rem; /* Adjust font size for very small screens */
     }
 
-    .contact-button {
-        margin-left: 25%;
-    }
 
+    /* Further adjustments for very small project cards */
+    .projects-container {
+        grid-template-columns: 1fr; /* Stack project cards on very small screens */
+        gap: 1.5rem;
+    }
+    .project-card img {
+        height: 160px; /* Slightly taller image when stacked */
+    }
+    .project-name h3 {
+        font-size: 1.2rem;
+    }
+    .project-description p {
+        font-size: 0.8rem;
+    }
+    .tech-card {
+        width: 80px; /* Smaller tech cards */
+        height: 80px;
+    }
+    .tech-card h6 {
+        font-size: 0.5rem; /* Even smaller font for tech names */
+    }
 }
 
+/* Specific media query for ranges (if needed, but 768px and 400px usually cover most) */
 @media screen and (min-width: 300px) and (max-width: 499px) {
     .react-activity-calendar {
         text-align: center;
@@ -824,9 +994,8 @@ form textarea {
         display: block;
     }
 
-    #git-stat>div>img {
-        width: 90%;
+    #git-stat > div > img {
+        width: 95%; /* Ensure images fill width */
         background-color: black;
     }
-
 }
