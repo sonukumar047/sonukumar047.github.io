@@ -391,6 +391,121 @@ span {
     margin-top: 1rem;
 }
 
+/* Specific styling for the Major Projects container (vertical stacking layout) */
+.major-projects-container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center cards horizontally */
+    gap: 2.5rem; /* Increased gap between stacked project cards */
+    margin-top: 1rem;
+}
+
+.major-projects-container .project-card {
+    width: 100%; /* Take full width of its container */
+    max-width: 800px; /* Limit max width for readability on large screens */
+    height: auto; /* Allow height to adjust to content */
+    padding: 30px; /* More generous padding */
+    text-align: left; /* Align text to left within the card */
+    border-radius: 1rem; /* More pronounced rounded corners */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, var(--bg-color), #f0f0f0); /* Subtle gradient background */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px; /* Softer, more professional shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    display: flex; /* Use flexbox for internal content alignment */
+    flex-direction: column;
+    justify-content: space-between; /* Push tech stack to bottom */
+}
+
+.major-projects-container .project-card:hover {
+    transform: translateY(-12px); /* More noticeable lift */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 40px; /* Stronger shadow on hover */
+    background: linear-gradient(145deg, #e0e0e0, var(--bg-color)); /* Invert gradient on hover */
+}
+
+.major-projects-container .project-card .project-name {
+    margin-bottom: 25px; /* More space below title */
+    text-align: center; /* Center the project title */
+}
+
+.major-projects-container .project-card .project-name h3 {
+    font-size: 1.6rem; /* Slightly larger and more impactful title */
+    color: var(--main-color);
+    font-weight: 700; /* Make it bolder */
+    position: relative;
+    padding-bottom: 8px; /* Space for underline */
+}
+
+.major-projects-container .project-card .project-name h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px; /* Longer underline */
+    height: 4px; /* Thicker underline */
+    background-color: var(--hover);
+    border-radius: 2px;
+}
+
+
+.major-projects-container .project-card .project-description {
+    margin-bottom: 30px; /* More space after description */
+    flex-grow: 1; /* Allow description to take available space */
+}
+
+.major-projects-container .project-card .project-description p {
+    font-size: 1rem; /* Clearer font size for descriptions */
+    line-height: 1.8; /* Increased line height for better readability */
+    color: var(--text-color);
+    text-align: justify; /* Justify text for a professional look */
+}
+
+.major-projects-container .project-card .project-tech-stack1 {
+    justify-content: center; /* Align tech stack to the center */
+    margin-top: 20px; /* More space above tech stack */
+    padding-top: 20px; /* Padding above tech stack icons */
+    border-top: 1px solid rgba(0, 0, 0, 0.12); /* Slightly darker separator line */
+    gap: 12px; /* Increased gap between tech cards */
+}
+
+.major-projects-container .project-card .project-tech-stack1 h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.major-projects-container .project-card .tech-card {
+    padding: 5px; /* More padding for tech cards */
+    width: 95px; /* Larger tech cards */
+    height: 95px;
+    border-radius: 0.8rem; /* More rounded corners */
+    border: 1.5px solid var(--main-color); /* Slightly thicker border */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* More noticeable shadow */
+}
+
+.major-projects-container .project-card .tech-card:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    transform: translateY(-3px); /* Subtle lift on tech card hover */
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.major-projects-container .project-card .tech-card img {
+    max-width: 70%; /* Larger icons within tech card */
+    max-height: 70%;
+    object-fit: contain;
+    margin-bottom: 5px; /* More space below icon */
+}
+
+.major-projects-container .project-card .tech-card h6 {
+    font-size: 0.7rem; /* Slightly larger font for tech names */
+    font-weight: 600; /* Bolder tech names */
+}
+
+
 .project-card {
     display: flex;
     flex-direction: column;
@@ -795,8 +910,9 @@ form textarea {
 
     /* Projects section responsiveness */
     .projects-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Further reduced minmax for project cards on mobile */
-        gap: 1rem; /* Reduced gap for projects */
+        display: grid; /* Keep grid for other project containers */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
     }
 
     .project-card {
