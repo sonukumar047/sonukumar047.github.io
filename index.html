@@ -43,6 +43,15 @@
                 target="_blank">
                 <button class="resume-button" id="resume-button-hero">Download Resume</button>
             </a>
+
+            <!-- Floating CTA -->
+            <div class="hero-cta">
+                <div class="cta-card">
+                    <h4>Looking to hire?</h4>
+                    <p>Available for AI/ML & backend roles. Let’s build something great.</p>
+                    <button id="hire-me-cta" class="resume-button">Hire me</button>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Hero Section End -->
@@ -57,7 +66,7 @@
         <div class="about-container">
 
             <div class="home-img-main">
-                <img class="home-img" src="image/sonu-kr-pic.jpg" alt="sonu_kumar">
+                <img class="home-img" src="image/Sonu-professional-pic.jpeg" alt="sonu_kumar">
 
                 <!-- Contact info -->
                 <div class="information">
@@ -166,9 +175,10 @@
             <div class="skill-category-group">
                 <h3>Data Science & AI/ML Development</h3>
                 <div class="skills-content">
-                    <div class="skills-card">
+                    <div class="skills-card" data-skill="Python" data-level="92">
                         <img class="skills-card-img" src="./image/python-logo.png" alt="python" />
                         <h4 class="skills-card-name">Python</h4>
+                        <div class="skill-meter"><div class="skill-fill" style="width:0%"></div></div>
                     </div>
                     <div class="skills-card">
                         <img class="skills-card-img" src="./image/flask-logo.png" alt="flask" />
@@ -186,13 +196,15 @@
                         <img class="skills-card-img" src="./image/groq-logo.png" alt="groq" />
                         <h4 class="skills-card-name">Groq</h4>
                     </div>
-                    <div class="skills-card">
+                    <div class="skills-card" data-skill="Hugging Face" data-level="80">
                         <img class="skills-card-img" src="./image/huggingface-logo.png" alt="huggingface" />
                         <h4 class="skills-card-name">Hugging Face</h4>
+                        <div class="skill-meter"><div class="skill-fill" style="width:0%"></div></div>
                     </div>
-                    <div class="skills-card">
+                    <div class="skills-card" data-skill="LangChain" data-level="88">
                         <img class="skills-card-img" src="./image/langchain-logo.jpeg" alt="langchain" />
                         <h4 class="skills-card-name">LangChain</h4>
+                        <div class="skill-meter"><div class="skill-fill" style="width:0%"></div></div>
                     </div>
                     <div class="skills-card">
                         <img class="skills-card-img" src="./image/langgraph-logo.png" alt="langgraph" />
@@ -233,9 +245,10 @@
             <div class="skill-category-group">
                 <h3>Database & ORM</h3>
                 <div class="skills-content">
-                    <div class="skills-card">
+                    <div class="skills-card" data-skill="MySQL" data-level="75">
                         <img class="skills-card-img" src="./image/mysql-logo.png" alt="mysql" />
                         <h4 class="skills-card-name">MySQL</h4>
+                        <div class="skill-meter"><div class="skill-fill" style="width:0%"></div></div>
                     </div>
                     <div class="skills-card">
                         <img class="skills-card-img" src="./image/mongodb-logo.png" alt="mongodb" />
@@ -260,13 +273,15 @@
                         <img class="skills-card-img" src="./image/css.png" alt="css" />
                         <h4 class="skills-card-name">CSS</h4>
                     </div>
-                    <div class="skills-card">
+                    <div class="skills-card" data-skill="JavaScript" data-level="82">
                         <img class="skills-card-img" src="./image/js.png" alt="js" />
                         <h4 class="skills-card-name">JavaScript</h4>
+                        <div class="skill-meter"><div class="skill-fill" style="width:0%"></div></div>
                     </div>
-                    <div class="skills-card">
+                    <div class="skills-card" data-skill="Java" data-level="85">
                         <img class="skills-card-img" src="./image/java.png" alt="java" />
                         <h4 class="skills-card-name">Java</h4>
+                        <div class="skill-meter"><div class="skill-fill" style="width:0%"></div></div>
                     </div>
                     <div class="skills-card">
                         <img class="skills-card-img" src="./image/sts.png" alt="sts" />
@@ -288,9 +303,10 @@
                         <img class="skills-card-img" src="./image/spring-logo.png" alt="spring" />
                         <h4 class="skills-card-name">Spring</h4>
                     </div>
-                    <div class="skills-card">
+                    <div class="skills-card" data-skill="Spring Boot" data-level="78">
                         <img class="skills-card-img" src="./image/springboot-logo.png" alt="spring_boot" />
                         <h4 class="skills-card-name">Spring Boot</h4>
+                        <div class="skill-meter"><div class="skill-fill" style="width:0%"></div></div>
                     </div>
                 </div>
             </div>
@@ -306,12 +322,26 @@
             <span>Few Things I've Build</span>
         </div>
 
+        <!-- Project controls: filter + search -->
+        <div class="projects-controls">
+            <div class="projects-tabs">
+                <button class="tab active" data-filter="all">All</button>
+                <button class="tab" data-filter="ai">AI / ML</button>
+                <button class="tab" data-filter="backend">Backend</button>
+                <button class="tab" data-filter="web">Web</button>
+                <button class="tab" data-filter="db">Database</button>
+            </div>
+            <div class="projects-search">
+                <input id="projects-search-input" type="search" placeholder="Search projects...">
+            </div>
+        </div>
+
         <div class="projects-categories">
             <!-- Major Projects (Monocept) -->
             <div class="project-category-group">
                 <h3>Major Projects (Monocept)</h3>
                 <div class="projects-container major-projects-container">
-                    <div class="project-card">
+                    <div class="project-card" data-category="ai">
                         <!-- No image for this project -->
                         <div class="project-name">
                             <h3 class="project-title">Mono-DB-Agent</h3>
@@ -347,7 +377,7 @@
                         <!-- No flow diagram for this project -->
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-category="ai">
                         <!-- No image for this project -->
                         <div class="project-name">
                             <h3 class="project-title">Mono-Aadhar-Masking</h3>
@@ -383,7 +413,7 @@
                         <!-- No flow diagram for this project -->
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-category="backend">
                         <!-- No image for this project -->
                         <div class="project-name">
                             <h3 class="project-title">mPro - MaxLife Insurance</h3>
@@ -415,7 +445,7 @@
                         <!-- No flow diagram for this project -->
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-category="db">
                         <!-- No image for this project -->
                         <div class="project-name">
                             <h3 class="project-title">DB Migration - Care Health Insurance</h3>
@@ -453,7 +483,7 @@
             <div class="project-category-group">
                 <h3>Data Science & AI/ML Development Projects</h3>
                 <div class="projects-container">
-                    <div class="project-card">
+                    <div class="project-card" data-category="ai">
                         <img src="./image/moviebot.png" alt="moviebot">
                         <div class="project-name">
                             <h3 class="project-title">MoviesBot</h3>
@@ -498,7 +528,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-category="ai">
                         <img src="./image/SpringAIBot.png" alt="springaibot">
                         <div class="project-name">
                             <h3 class="project-title">SpringAIBot</h3>
@@ -551,7 +581,7 @@
             <div class="project-category-group">
                 <h3>Database-Oriented Projects</h3>
                 <div class="projects-container">
-                    <div class="project-card">
+                    <div class="project-card" data-category="web">
                         <img src="./image/elec_bill_mng_sys.png" alt="elec_bill_mng_sys">
                         <div class="project-name">
                             <h3 class="project-title">Electricity Bill Management System</h3>
@@ -577,7 +607,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-category="web">
                         <img src="./image/easy_rent_hub.jpeg" alt="easy_rent_hub">
                         <div class="project-name">
                             <h3 class="project-title">EasyRentHub</h3>
@@ -611,7 +641,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-category="web">
                         <img src="./image/globeTravel.jpg" alt="globeTravel">
                         <div class="project-name">
                             <h3 class="project-title">Trip Management System</h3>
@@ -663,7 +693,7 @@
             <div class="project-category-group">
                 <h3>General Web Development Projects</h3>
                 <div class="projects-container">
-                    <div class="project-card">
+                    <div class="project-card" data-category="web">
                         <img src="./image/pueplle.png" alt="pueplle">
                         <div class="project-name">
                             <h3 class="project-title">purplle</h3>
@@ -704,6 +734,27 @@
     </section>
     <!-- Projects Section End -->
 
+    <!-- Testimonials (new) -->
+    <section id="testimonials" class="section">
+        <div class="heading">
+            <h2>Testimonials</h2>
+            <span>What people say</span>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial active">
+                <p>"Sonu delivered production-grade LLM tooling for our analytics team — fast, thoughtful and reliable."</p>
+                <h4>- Product Lead, Monocept</h4>
+            </div>
+            <div class="testimonial">
+                <p>"His DB-Agent saved hours for non-technical stakeholders — brilliant engineering and UX."</p>
+                <h4>- Data Engineer</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Excellent backend skills — API design and migrations were seamless and well-tested."</p>
+                <h4>- Engineering Manager</h4>
+            </div>
+        </div>
+    </section>
 
     <!-- Github Stats Section Start -->
 
@@ -719,18 +770,24 @@
         <br>
         <div id="git-stat">
             <div>
-                <img id="github-streak-stats"
-                    src="https://github-readme-streak-stats.herokuapp.com?user=sonukumar047&theme=dark"
-                    alt="streak-stat" />
+                <a href="https://github.com/sonukumar047" target="_blank" title="Open GitHub profile">
+                    <img id="github-streak-stats" class="git-img" loading="lazy"
+                        src="https://github-readme-streak-stats.herokuapp.com?user=sonukumar047&theme=dark"
+                        alt="streak-stat" />
+                </a>
                 <br>
-                <img id="github-stats-card"
-                    src="https://github-readme-stats.vercel.app/api?username=sonukumar047&count_private=true&theme=react"
-                    alt="stat-card" />
+                <a href="https://github.com/sonukumar047" target="_blank" title="Open GitHub stats">
+                    <img id="github-stats-card" class="git-img" loading="lazy"
+                        src="https://github-readme-stats.vercel.app/api?username=sonukumar047&count_private=true&theme=react"
+                        alt="stat-card" />
+                </a>
             </div>
             <div>
-                <img id="github-top-langs"
-                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=sonukumar047&theme=react"
-                    alt="top_languages" />
+                <a href="https://github.com/sonukumar047?tab=repositories" target="_blank" title="Top languages">
+                    <img id="github-top-langs" class="git-img" loading="lazy"
+                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=sonukumar047&theme=react"
+                        alt="top_languages" />
+                </a>
             </div>
         </div>
     </section>
@@ -754,16 +811,32 @@
 
     <!-- Contact Section End -->
 
+    <!-- Project detail modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            <div class="modal-body">
+                <div class="modal-image"><img src="" alt="project image"></div>
+                <div class="modal-info">
+                    <h3 class="modal-title">Project Title</h3>
+                    <p class="modal-desc">Full project description will appear here.</p>
+                    <div class="modal-tech"></div>
+                    <div class="modal-links">
+                        <a class="btn btn-live" href="#" target="_blank">Live</a>
+                        <a class="btn btn-code" href="#" target="_blank">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="footer">
         <h2>Follow Me</h2>
         <div class="footer-social">
-            <a id="contact-github" href="https://github.com/sonukumar047" target="_blank"><i
-                    class='bx bxl-github'></i></a>
-            <a id="contact-linkedin" href="https://www.linkedin.com/in/sonu-kumar-6868b7276/" target="_blank"><i
-                    class='bx bxl-linkedin'></i></a>
-            <a href="https://www.instagram.com/sanu0047/" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100008451156756" target="_blank"><i
-                    class='bx bxl-facebook'></i></a>
+            <a id="contact-github" href="https://github.com/sonukumar047" target="_blank" aria-label="GitHub — Sonu Kumar"><i class='bx bxl-github'></i></a>
+            <a id="contact-linkedin" href="https://www.linkedin.com/in/sonu-kumar-6868b7276/" target="_blank" aria-label="LinkedIn — Sonu Kumar"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.instagram.com/sanu0047/" target="_blank" aria-label="Instagram — sonu"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100008451156756" target="_blank" aria-label="Facebook — Sonu Kumar"><i class='bx bxl-facebook'></i></a>
         </div>
 
     </div>
