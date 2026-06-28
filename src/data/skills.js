@@ -1,0 +1,75 @@
+const skillCategories = [
+  {
+    title: 'AI/ML & Data Science',
+    skills: [
+      { name: 'Python', level: 92 },
+      { name: 'LangChain', level: 88 },
+      { name: 'LangGraph', level: 85 },
+      { name: 'OpenAI', level: 90 },
+      { name: 'Hugging Face', level: 80 },
+      { name: 'RAG', level: 88 },
+      { name: 'NLP', level: 85 },
+      { name: 'Scikit-learn', level: 78 },
+      { name: 'Pandas', level: 82 },
+      { name: 'NumPy', level: 80 },
+      { name: 'OpenCV', level: 75 },
+      { name: 'YOLOv8', level: 78 },
+      { name: 'Ollama', level: 80 },
+      { name: 'Groq', level: 78 },
+      { name: 'DeepSeek', level: 75 },
+      { name: 'Llama', level: 75 },
+      { name: 'Qwen', level: 72 },
+    ],
+  },
+  {
+    title: 'Backend Development',
+    skills: [
+      { name: 'FastAPI', level: 85 },
+      { name: 'Spring Boot', level: 82 },
+      { name: 'Flask', level: 80 },
+      { name: 'Java', level: 85 },
+      { name: 'REST APIs', level: 88 },
+      { name: 'Microservices', level: 80 },
+    ],
+  },
+  {
+    title: 'Cloud & DevOps',
+    skills: [
+      { name: 'AWS Bedrock', level: 82 },
+      { name: 'AWS SageMaker', level: 78 },
+      { name: 'AWS Lambda', level: 80 },
+      { name: 'Step Functions', level: 78 },
+      { name: 'API Gateway', level: 80 },
+      { name: 'S3', level: 82 },
+      { name: 'EC2', level: 75 },
+      { name: 'OpenSearch', level: 72 },
+      { name: 'Docker', level: 75 },
+      { name: 'Jenkins', level: 70 },
+    ],
+  },
+  {
+    title: 'Database & Vector DB',
+    skills: [
+      { name: 'MySQL', level: 82 },
+      { name: 'PostgreSQL', level: 80 },
+      { name: 'MongoDB', level: 75 },
+      { name: 'Pinecone', level: 78 },
+      { name: 'ChromaDB', level: 78 },
+      { name: 'FAISS', level: 75 },
+      { name: 'Hibernate', level: 72 },
+    ],
+  },
+  {
+    title: 'Frontend & Tools',
+    skills: [
+      { name: 'React', level: 78 },
+      { name: 'JavaScript', level: 82 },
+      { name: 'HTML/CSS', level: 85 },
+      { name: 'Git', level: 85 },
+      { name: 'PySpark', level: 72 },
+      { name: 'Polars', level: 70 },
+    ],
+  },
+];
+
+export default skillCategories;
